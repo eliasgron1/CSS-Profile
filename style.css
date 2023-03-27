@@ -1,0 +1,230 @@
+@keyframes fading{
+  0%{opacity:0}
+  25%{opacity:1;}
+  50%{opacity:1;}
+  100%{opacity:1;}
+}
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+@keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 3px #fff, 0 0 7px #fff;
+    }
+    to {
+      text-shadow: 0 0 8px #fff, 0 0 1px #fff, 0 0 7px #fff;
+    }
+  }
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body, html{
+    background-color: #121212;
+    color: aliceblue;
+}
+.links{
+    padding-left: 20px;
+    padding: 10px;
+    margin: 0px;
+    text-align: left;
+    color: aliceblue;
+}
+.linksInd, .display-left, .display-right{
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-left: -3px;
+    display: inline;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 1.3em;
+    border: 2px solid aliceblue;
+    transition: .4s;
+    background-color: rgba(255, 255, 255, .3);
+    color: aliceblue;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+a:link,a:visited,a:active{
+    text-decoration: none;
+}
+a:hover, .display-left:hover, .display-right:hover{
+    background-color: #121212;
+    color: aliceblue;
+}
+.mainheader{
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-image: url(pics/Näyttökuva\ 2023-03-07\ 163113.png);
+    background-blend-mode: multiply;
+    border-bottom: #fff;
+}
+.name{
+    letter-spacing: 15px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    text-align: center;
+    font-size: 5em;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+.firstname{
+    display: inline;
+    font-weight: lighter;
+    font-stretch: expanded;
+    margin: px;
+    padding: 10px;
+    margin-bottom: -30px;
+}
+.lastname{
+    display: inline;
+    font-weight: lighter;
+    margin: 0px;
+    font-size: .5em;
+}
+
+
+
+.Border{
+    position: static;
+    padding: 0px;
+    margin: 0px;
+  --border-size: 10px;
+  --border-angle: 0turn;
+  width: auto;
+  height: 10vmin;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #121212,
+      #121212,
+      #121212
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f,       #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 10s linear infinite;
+
+}
+.About{
+    font-size: 3em;
+    text-align: center;
+    font-weight: normal;
+    padding: 30px;
+    margin: -30px;
+    margin-top: -93px;
+    background-color: #121212;
+}
+.AllOfAbout{
+  display: flex;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  justify-content: center;
+  align-items: center;
+
+}
+.AllOfAbout p{
+  letter-spacing: 1.5px;
+    font-size: 1.4em;
+    margin: 30px;
+    padding: 30px;
+    width: 40vw;
+}
+.AllOfAbout img{
+    margin: 30px;
+    padding: 30px;
+    height: 21vw;
+    width: 38vw;
+    border-radius: 50%;
+}
+.skills{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.mySlides{
+  height: 600px;
+  padding: 30px;
+}
+.sliderBtn{
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.display-right{
+margin: 10px;
+}
+.display-left{
+margin: 10px;
+}
+
+.mySlides{
+  animation: fading 3s;
+  animation-fill-mode: forwards;
+}
+.footer{
+  display: flex;
+  position: static;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+  --border-size: 2px;
+  --border-angle: 0turn;
+  border-bottom: #121212 solid;
+  border-width: 20px;
+  height: 15vmin;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #121212,
+      #121212,
+      #121212
+    ),
+    conic-gradient(from var(--border-angle), transparent 20%, #08f,       #f03);
+    background-size: calc(120% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  animation: bg-spin 10s linear infinite;
+}
+.footerLinks{
+  padding-top: 10px;
+  width: 14em;
+  padding-bottom: -30px;
+}
+.footer a{ 
+  font-size: 90%;
+  display: block;
+  margin: 10px;
+  align-items: center;
+}
+.footer p{
+  width: 30vw;
+  padding: 30px;
+  margin: 30px;
+  justify-content: right;
+  align-items:center;
+  float: right;
+}
